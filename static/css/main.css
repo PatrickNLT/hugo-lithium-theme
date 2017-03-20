@@ -61,6 +61,7 @@ a {
   display: block;
   max-height: 40px;
   width: auto;
+  border-radius: 50%;
 }
 
 .nav-links {
@@ -258,6 +259,7 @@ a {
 
   .nav-logo img {
     max-height: 50px;
+    border-radius: 50%;
   }
 
   .nav-links {
