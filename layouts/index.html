@@ -3,8 +3,8 @@
 <main class="content" role="main">
 
   <div class="archive">
-    {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
-    <h2 class="archive-title">{{ .Key }}</h2>
+    {{ range (where .Data.Pages "Type" "post").GroupByDate "2006" }}
+    {{ if eq .Key $.Site.Params.archiveYear }}<h2 class="archive-title">Archives</h2>{{ end }}
     {{ range .Pages }}
     <article class="archive-item">
       <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a>
