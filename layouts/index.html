@@ -7,15 +7,13 @@
   <h1>Blog</h1>
 
   <div class="archive">
-    {{ range (where .Site.Pages "Type" "posts").GroupByDate "2006" }}
-    {{ range .Pages }}
+    {{ range where .Site.RegularPages "Type" "post" }}
     <article class="archive-item">
       <span class="archive-item-date">
         {{ .Date.Format "January 2, 2006" }}
       </span>
       <span><a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a></span>
     </article>
-    {{ end }}
     {{ end }}
   </div>
 
