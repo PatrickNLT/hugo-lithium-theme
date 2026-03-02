@@ -6,6 +6,8 @@
 
   <h1>Blog</h1>
 
+  {{ partial "blog/header.html" . }}
+
   <div class="archive">
     {{ range where .Site.RegularPages "Type" "post" }}
     <article class="archive-item">
